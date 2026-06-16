@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="The Rich Challenge is a transparent public gift experiment: can the internet make one person rich $1 at a time?" />
+  <title>The Rich Challenge | $1 at a Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="The Rich Challenge home">
+        <span class="brand-mark">$</span>
+        <span class="brand-text">The Rich Challenge</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#gift">Gift</a>
+        <a href="#rules">Rules</a>
+        <a href="#ledger">Ledger</a>
+        <a href="#apply">Apply</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-pad">
+      <div class="hero-bg-comedy" aria-hidden="true">
+        <div class="shrug-mascot">
+          <div class="shrug-head">?</div>
+          <div class="shrug-body">
+            <span class="shrug-arm left-arm">╲</span>
+            <span class="shrug-face">¯\_(ツ)_/¯</span>
+            <span class="shrug-arm right-arm">╱</span>
+          </div>
+          <div class="shrug-dollar">$1</div>
+        </div>
+
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A transparent public gift experiment</p>
+          <h1>Can the internet make one person rich <span>$1 at a time?</span></h1>
+          <p class="hero-lede">
+            Round 001 is simple: make me rich for no noble reason whatsoever.
+            No charity angle. No investment pitch. No reward. Just a very honest internet joke with a real counter and clear rules.
+          </p>
+
+          <div class="joke-badge">
+            <span>Official premise:</span>
+            <strong>“I asked.”</strong>
+          </div>
+          <div class="hero-actions" aria-label="Main actions">
+            <a class="button button-primary" href="#gift">Gift Rich Points</a>
+            <a class="button button-secondary" href="#rules">Read the rules</a>
+          </div>
+
+          <ul class="trust-list" aria-label="Important disclosures">
+            <li>Not charity</li>
+            <li>Not tax-deductible</li>
+            <li>Not an investment</li>
+            <li>No reward or return</li>
+            <li>Adults only</li>
+          </ul>
+        </div>
+
+        <aside class="round-card" aria-labelledby="round-title">
+          <div class="round-topline">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Round 001 is open</span>
+          </div>
+
+          <h2 id="round-title">Make Me Rich</h2>
+          <p class="round-note">
+            Goal: <strong>10,000,000 Rich Points</strong>. One Rich Point equals one U.S. dollar.
+          </p>
+
+          <!--
+            STATIC COUNTER SETTINGS
+            Update these numbers manually until the real payment webhook is connected.
+            Formula: progress percentage = current Rich Points / 10,000,000 * 100.
+            Example: 250,000 Rich Points = 2.5%, so set --progress: 2.5%.
+          -->
+          <div class="gauge" style="--progress: 0%;" aria-label="Progress toward 10 million Rich Points">
+            <div class="gauge-header">
+              <span>Progress</span>
+              <strong>0.00%</strong>
+            </div>
+            <div class="meter" aria-hidden="true">
+              <div class="meter-fill"></div>
+            </div>
+            <div class="gauge-numbers">
+              <span><strong>0</strong> / 10,000,000 Rich Points</span>
+              <span>$0 gross gifted</span>
+            </div>
+          </div>
+
+          <div class="mini-stats" aria-label="Round statistics">
+            <div>
+              <span class="stat-label">Unit</span>
+              <strong>$1</strong>
+            </div>
+            <div>
+              <span class="stat-label">Main goal</span>
+              <strong>$10M</strong>
+            </div>
+            <div>
+              <span class="stat-label">Review</span>
+              <strong>3-6 mo.</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="gift" class="section-pad section-surface">
+      <div class="container split-grid">
+        <div>
+          <p class="eyebrow">Gift Rich Points</p>
+          <h2>Pick a number. Keep the joke moving.</h2>
+          <p>
+            One Rich Point equals <strong>$1</strong>. You can gift one point or more. Gifts are voluntary and final
+            unless the payment processor requires otherwise.
+          </p>
+          <p class="small-note">
+  Gifts are voluntary. Processing fees, holds, refunds, taxes, and other costs may affect the final net amount received.
+</p>
+          <!-- <p class="small-note">
+            Replace each <code>href</code> below with your real Stripe, PayPal, Venmo business, or other payment link
+            before publishing.
+          </p> -->
+        </div>
+
+        <div class="gift-panel" aria-label="Gift options">
+          <div class="gift-grid">
+            <a class="gift-button" href="https://example.com/gift-1" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>1</strong>
+              <em>Rich Point</em>
+            </a>
+            <a class="gift-button" href="https://example.com/gift-5" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>5</strong>
+              <em>Rich Points</em>
+            </a>
+            <a class="gift-button" href="https://example.com/gift-10" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>10</strong>
+              <em>Rich Points</em>
+            </a>
+            <a class="gift-button" href="https://example.com/gift-25" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>25</strong>
+              <em>Rich Points</em>
+            </a>
+            <a class="gift-button" href="https://example.com/gift-100" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>100</strong>
+              <em>Rich Points</em>
+            </a>
+            <a class="gift-button" href="https://example.com/gift-custom" target="_blank" rel="noopener">
+              <span>Gift</span>
+              <strong>Custom</strong>
+              <em>Any amount</em>
+            </a>
+          </div>
+
+          <p class="panel-disclaimer">
+            This is not a purchase, charity donation, raffle entry, investment, sweepstakes entry, or payment for a
+            future turn.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section-pad">
+      <div class="container narrow">
+        <p class="eyebrow">The rules</p>
+        <h2>Nothing hidden. That is the whole point.</h2>
+
+        <div class="rules-grid">
+          <article class="rule-card">
+            <span class="rule-number">01</span>
+            <h3>Round 001 is for me</h3>
+            <p>I am the creator and the first featured person. The point of this round is to test whether the idea can
+              move in public.</p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-number">02</span>
+            <h3>No one gets paid back</h3>
+            <p>Gifting does not create a return, profit, reward, prize, equity, access, or future payout.</p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-number">03</span>
+            <h3>Future applications are free</h3>
+            <p>You can apply to be considered for a future round without gifting anything. Gifting does not improve your
+              chances.</p>
+          </article>
+          <article class="rule-card">
+            <span class="rule-number">04</span>
+            <h3>The counter is public</h3>
+            <p>Gross gifted, estimated fees, net received, and progress updates will be posted in the public ledger.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <h3>The clean explanation</h3>
+          <p>
+            The Rich Challenge is a voluntary public tipping experiment. One featured person receives gifts each round.
+            Gifts are not charity, not tax-deductible, and not investments. There is no guaranteed next round and no
+            guaranteed selection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ledger" class="section-pad section-surface">
+      <div class="container">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow">Public ledger</p>
+            <h2>Track the round.</h2>
+          </div>
+          <p class="heading-note">
+            Update this manually at first. Later, connect it to your payment processor automatically.
+          </p>
+        </div>
+
+        <div class="ledger-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Gross gifted</th>
+                <th>Estimated fees</th>
+                <th>Estimated net</th>
+                <th>Rich Points</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Launch day</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>0</td>
+                <td>Round 001 opened.</td>
+              </tr>
+              <tr>
+                <td>Day 30</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>First monthly check-in.</td>
+              </tr>
+              <tr>
+                <td>Day 90</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Three-month review.</td>
+              </tr>
+              <tr>
+                <td>Day 180</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Six-month review.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply" class="section-pad">
+      <div class="container split-grid align-start">
+        <div>
+          <p class="eyebrow">Future rounds</p>
+          <h2>Apply to be considered later.</h2>
+          <p>
+            This application is separate from gifting. You do not need to gift money to apply, and gifting money does
+            not improve your chance of being selected.
+          </p>
+          <p>
+            If another round happens, the next featured person may be selected from eligible applicants after identity,
+            age, consent, and payment details are verified.
+          </p>
+        </div>
+
+        <!--
+          FORM SETUP
+          This static form will not submit anywhere until you connect it to a form service.
+          Options: Tally, Typeform, Google Forms, Formspree, Netlify Forms, Airtable, or your own backend.
+          Replace action="https://example.com/form-endpoint" with your actual form endpoint.
+        -->
+        <form class="apply-form" action="https://example.com/form-endpoint" method="post">
+          <div class="form-row">
+            <label for="name">First name</label>
+            <input id="name" name="first_name" type="text" autocomplete="given-name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="location">Country / state</label>
+            <input id="location" name="location" type="text" autocomplete="country-name"
+              placeholder="Example: United States, Florida" required />
+          </div>
+
+          <div class="form-row">
+            <label for="handle">Social handle <span>optional</span></label>
+            <input id="handle" name="social_handle" type="text" placeholder="@yourhandle" />
+          </div>
+
+          <div class="form-row">
+            <label for="reason">Why should the internet make you rich? <span>250 characters max</span></label>
+            <textarea id="reason" name="reason" rows="4" maxlength="250" placeholder="Keep it short, honest, and funny."
+              required></textarea>
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="age_confirmed" required />
+            <span>I confirm I am at least 18 years old.</span>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="no_purchase_required" required />
+            <span>I understand no gift, purchase, or payment is required to apply, and gifting does not improve my
+              chances.</span>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="public_consent" required />
+            <span>I understand that if selected, I may need to consent to being publicly featured before any round
+              begins.</span>
+          </label>
+
+          <button class="button button-primary form-button" type="submit">Apply for free</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="section-pad section-surface">
+      <div class="container narrow">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions people will ask immediately.</h2>
+
+        <div class="faq-list">
+          <details open>
+            <summary>Is this a charity?</summary>
+            <p>No. This is not charity and gifts are not tax-deductible charitable donations.</p>
+          </details>
+
+          <details>
+            <summary>Is this an investment?</summary>
+            <p>No. There is no return, profit, equity, ownership, payout, or financial benefit promised to anyone who
+              gifts.</p>
+          </details>
+
+          <details>
+            <summary>Will gifting help me become the next featured person?</summary>
+            <p>No. Gifting does not improve your odds. Applying for a future round is free.</p>
+          </details>
+
+          <details>
+            <summary>Why $10 million?</summary>
+            <p>Because the experiment is intentionally absurd but easy to understand: 10 million Rich Points equals $10
+              million gross before fees, taxes, holds, refunds, or other costs.</p>
+          </details>
+
+          <details>
+            <summary>What happens after 3-6 months?</summary>
+            <p>The round will be reviewed publicly. The review may include total gifted, estimated fees, net received,
+              best-performing platforms, and whether another round makes sense.</p>
+          </details>
+
+          <details>
+            <summary>Can minors participate?</summary>
+            <p>No. This site is intended for adults only. Do not gift money you need.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top" aria-label="The Rich Challenge home">
+          <span class="brand-mark">$</span>
+          <span class="brand-text">The Rich Challenge</span>
+        </a>
+        <p>
+          A public gift experiment. Not charity. Not an investment. No reward. No return.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#gift">Gift</a>
+        <a href="#rules">Rules</a>
+        <a href="#ledger">Ledger</a>
+        <a href="#apply">Apply</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
